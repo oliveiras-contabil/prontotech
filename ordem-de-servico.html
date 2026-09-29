@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProntoTech | Ordem de Serviço</title>
+<meta name="description" content="Abra uma ordem de serviço para atendimento de informática da ProntoTech.">
+<meta name="theme-color" content="#07111f">
+<style>
+:root{--bg:#07111f;--card:#101d31;--accent:#8b5cf6;--accent2:#c084fc;--text:#f8f7ff;--muted:#b7b0c8;--line:rgba(255,255,255,.10);--line2:rgba(139,92,246,.25)}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at 10% 8%,rgba(139,92,246,.18),transparent 28%),linear-gradient(180deg,#070d19,#0a1322 52%,#07111f)}
+a{text-decoration:none;color:inherit}.container{width:min(980px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;backdrop-filter:blur(16px);background:rgba(7,13,25,.85);border-bottom:1px solid var(--line)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;font-size:21px;font-weight:850}.logo{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent2));font-weight:900}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 18px;border-radius:14px;font-weight:800;border:1px solid transparent;cursor:pointer}.btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:white}.btn-secondary{border-color:var(--line);background:rgba(255,255,255,.04)}
+.hero{padding:72px 0 28px}.eyebrow{display:inline-flex;padding:8px 12px;border-radius:999px;border:1px solid var(--line2);background:rgba(139,92,246,.08);color:#d8b8ff;font-size:12px;font-weight:900;letter-spacing:.08em}
+h1{font-size:clamp(42px,6vw,64px);line-height:1;margin:18px 0 16px;letter-spacing:-2.4px}.lead{color:var(--muted);font-size:18px;line-height:1.7;max-width:760px}
+.form-wrap{padding:28px 0 72px}.card{padding:28px;border-radius:24px;background:linear-gradient(180deg,#101d31,#151f35);border:1px solid var(--line);box-shadow:0 16px 42px rgba(0,0,0,.22)}
+.section-title{margin:8px 0 18px;font-size:19px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.full{grid-column:1/-1}
+label{display:block;font-size:13px;font-weight:800;margin-bottom:8px;color:#e9e2f4}
+input,select,textarea{width:100%;padding:13px 14px;border-radius:13px;border:1px solid var(--line);background:rgba(255,255,255,.045);color:var(--text);font:inherit;outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--line2);box-shadow:0 0 0 3px rgba(139,92,246,.08)}
+select option{color:#111}textarea{min-height:120px;resize:vertical}
+.hr{height:1px;background:var(--line);margin:28px 0}.checkline{display:flex;gap:10px;align-items:flex-start;color:var(--muted);font-size:13px;line-height:1.55}.checkline input{width:auto;margin-top:3px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}.note{color:#8f879e;font-size:12px;line-height:1.55;margin-top:14px}
+.success-note{padding:14px 16px;border:1px solid rgba(192,132,252,.24);background:rgba(139,92,246,.08);border-radius:14px;color:#d9c7ee;font-size:13px;line-height:1.6;margin-bottom:20px}
+footer{padding:30px 0 42px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+@media(max-width:700px){.grid{grid-template-columns:1fr}.full{grid-column:auto}.nav .btn{display:none}.card{padding:22px}}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html"><span class="logo">PT</span> ProntoTech</a>
+    <a class="btn btn-secondary" href="index.html">Voltar ao site</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">ORDEM DE SERVIÇO</span>
+    <h1>Conte o que está acontecendo.</h1>
+    <p class="lead">Preencha os dados abaixo para registrar uma solicitação de atendimento. Quanto mais detalhes você informar, mais fácil fica fazer uma avaliação inicial.</p>
+  </div>
+</section>
+
+<section class="form-wrap">
+  <div class="container">
+    <form class="card" action="https://formsubmit.co/felipe.hagihara@outlook.com" method="POST">
+      <input type="hidden" name="_subject" value="Nova Ordem de Serviço - ProntoTech">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://oliveiras-contabil.github.io/prontotech/os-enviada.html">
+
+      <div class="success-note">
+        Esta solicitação será enviada para o e-mail responsável pelo atendimento. Na primeira utilização, o serviço de envio poderá solicitar uma confirmação de ativação no e-mail de destino.
+      </div>
+
+      <div class="section-title">Dados do cliente</div>
+      <div class="grid">
+        <div>
+          <label for="nome">Nome completo *</label>
+          <input id="nome" name="Nome do cliente" type="text" required>
+        </div>
+        <div>
+          <label for="telefone">Telefone / WhatsApp *</label>
+          <input id="telefone" name="Telefone / WhatsApp" type="tel" required>
+        </div>
+        <div>
+          <label for="email">E-mail</label>
+          <input id="email" name="E-mail do cliente" type="email">
+        </div>
+        <div>
+          <label for="atendimento">Tipo de atendimento</label>
+          <select id="atendimento" name="Tipo de atendimento">
+            <option value="A definir">A definir</option>
+            <option value="Remoto">Remoto</option>
+            <option value="Presencial">Presencial</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+      <div class="section-title">Equipamento</div>
+      <div class="grid">
+        <div>
+          <label for="equipamento">Tipo de equipamento *</label>
+          <select id="equipamento" name="Equipamento" required>
+            <option value="">Selecione</option>
+            <option>Notebook</option>
+            <option>Desktop / PC</option>
+            <option>Impressora</option>
+            <option>Roteador / Rede</option>
+            <option>Celular / Tablet</option>
+            <option>Outro</option>
+          </select>
+        </div>
+        <div>
+          <label for="marca">Marca / modelo</label>
+          <input id="marca" name="Marca / modelo" type="text">
+        </div>
+        <div>
+          <label for="serie">Número de série</label>
+          <input id="serie" name="Número de série" type="text">
+        </div>
+        <div>
+          <label for="acessorios">Acessórios entregues</label>
+          <input id="acessorios" name="Acessórios entregues" type="text" placeholder="Ex.: carregador, fonte, mouse">
+        </div>
+      </div>
+
+      <div class="hr"></div>
+      <div class="section-title">Solicitação</div>
+      <div class="grid">
+        <div class="full">
+          <label for="problema">Descreva o problema *</label>
+          <textarea id="problema" name="Problema relatado" required placeholder="Conte o que está acontecendo, quando começou e o que aparece na tela."></textarea>
+        </div>
+        <div class="full">
+          <label for="servico">Serviço desejado ou solicitado</label>
+          <input id="servico" name="Serviço solicitado" type="text" placeholder="Ex.: formatação, limpeza, upgrade, configuração...">
+        </div>
+        <div class="full">
+          <label for="obs">Observações adicionais</label>
+          <textarea id="obs" name="Observações" placeholder="Informações extras que possam ajudar no atendimento."></textarea>
+        </div>
+      </div>
+
+      <div class="hr"></div>
+      <label class="checkline">
+        <input type="checkbox" required>
+        <span>Confirmo que as informações acima são verdadeiras e autorizo o contato para avaliação da solicitação e definição do atendimento.</span>
+      </label>
+
+      <div class="actions">
+        <button class="btn btn-primary" type="submit">Enviar Ordem de Serviço</button>
+        <a class="btn btn-secondary" href="index.html">Cancelar e voltar</a>
+      </div>
+
+      <div class="note">
+        O envio deste formulário registra uma solicitação inicial. Valores, prazos, diagnóstico e execução do serviço serão combinados separadamente antes do atendimento.
+      </div>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer><div class="container">© 2026 ProntoTech.</div></footer>
+</body>
+</html>
