@@ -154,6 +154,12 @@ footer{padding:34px 0 44px;border-top:1px solid var(--line);color:var(--muted);f
   .panel{min-height:auto}.cta{align-items:flex-start;flex-direction:column}
   .section-head h2{font-size:34px}
 }
+.rating-box{margin-top:22px}
+.stars{display:flex;gap:8px;margin-bottom:14px}
+.stars button{background:transparent;border:0;color:#5d4d73;font-size:34px;cursor:pointer;padding:0;transition:.15s ease}
+.stars button.active,.stars button:hover{color:var(--accent2);transform:translateY(-1px)}
+.rating-box textarea{width:100%;min-height:120px;resize:vertical;margin:0 0 14px;padding:14px 16px;border-radius:14px;border:1px solid var(--line);background:rgba(255,255,255,.04);color:var(--text);font:inherit;outline:none}
+.rating-box textarea:focus{border-color:var(--line2)}
 </style>
 </head>
 <body>
@@ -341,6 +347,46 @@ footer{padding:34px 0 44px;border-top:1px solid var(--line);color:var(--muted);f
   </div>
 </section>
 
+<section id="avaliacao">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">DEPOIS DO SERVIÇO</span>
+        <h2>Como foi o atendimento?</h2>
+      </div>
+      <p>A opinião do cliente ajuda a melhorar o serviço e também dá mais segurança para quem ainda está procurando ajuda com informática.</p>
+    </div>
+
+    <div class="highlight">
+      <div class="highlight-grid">
+        <div>
+          <h3>Avalie sua experiência</h3>
+          <p>Escolha uma nota de 1 a 5 estrelas e, se quiser, conte rapidamente como foi o atendimento.</p>
+          <div class="rating-box">
+            <div class="stars" id="stars">
+              <button type="button" data-value="1" aria-label="1 estrela">★</button>
+              <button type="button" data-value="2" aria-label="2 estrelas">★</button>
+              <button type="button" data-value="3" aria-label="3 estrelas">★</button>
+              <button type="button" data-value="4" aria-label="4 estrelas">★</button>
+              <button type="button" data-value="5" aria-label="5 estrelas">★</button>
+            </div>
+            <textarea id="reviewText" placeholder="Quer deixar um comentário? (opcional)"></textarea>
+            <button class="btn btn-primary" type="button" onclick="sendReview()">Enviar avaliação pelo WhatsApp</button>
+            <div class="mini-note">A avaliação será enviada em uma mensagem pronta. Você pode revisar antes de enviar.</div>
+          </div>
+        </div>
+
+        <div class="checks">
+          <div class="check">Nota de 1 a 5 estrelas</div>
+          <div class="check">Comentário opcional</div>
+          <div class="check">Envio simples pelo WhatsApp</div>
+          <div class="check">Ajuda a melhorar o atendimento</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="duvidas">
   <div class="container">
     <div class="section-head">
@@ -387,5 +433,27 @@ footer{padding:34px 0 44px;border-top:1px solid var(--line);color:var(--muted);f
 </footer>
 
 <a class="whatsapp" href="https://wa.me/5511999999999" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">💬</a>
+<script>
+let selectedRating = 0;
+document.querySelectorAll('#stars button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    selectedRating = Number(btn.dataset.value);
+    document.querySelectorAll('#stars button').forEach(star => {
+      star.classList.toggle('active', Number(star.dataset.value) <= selectedRating);
+    });
+  });
+});
+
+function sendReview(){
+  if(!selectedRating){
+    alert('Escolha uma nota de 1 a 5 estrelas.');
+    return;
+  }
+  const text = document.getElementById('reviewText').value.trim();
+  const stars = '★'.repeat(selectedRating) + '☆'.repeat(5-selectedRating);
+  const msg = 'Olá! Minha avaliação do atendimento ProntoTech é: ' + stars + ' (' + selectedRating + '/5)' + (text ? '\n\nComentário: ' + text : '');
+  window.open('https://wa.me/5511999999999?text=' + encodeURIComponent(msg), '_blank');
+}
+</script>
 </body>
 </html>
