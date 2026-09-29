@@ -90,8 +90,8 @@ h1{font-size:clamp(44px,6vw,76px);line-height:.98;margin:20px 0 22px;letter-spac
 }
 .pill{
   padding:14px 12px;text-align:center;border-radius:14px;border:1px solid var(--line);
-  background:rgba(255,255,255,.035);color:#d8e2eb;font-size:13px
-}
+  background:rgba(255,255,255,.035);color:#d8e2eb;font-size:13px;transition:.2s ease
+}.pill:hover{transform:translateY(-2px);border-color:rgba(139,92,246,.35);background:rgba(139,92,246,.08)}
 section{padding:72px 0}
 .section-head{display:flex;align-items:end;justify-content:space-between;gap:34px;margin-bottom:30px}
 .section-head h2{font-size:40px;letter-spacing:-1.6px;margin:10px 0 0}
@@ -218,11 +218,11 @@ footer{padding:34px 0 44px;border-top:1px solid var(--line);color:var(--muted);f
 
 <div class="problem-strip">
   <div class="container strip">
-    <div class="pill">💻 Formatação</div>
-    <div class="pill">🦠 Vírus e limpeza</div>
-    <div class="pill">⚡ Otimização</div>
-    <div class="pill">🔧 Troca de peças</div>
-    <div class="pill">🖨️ Configuração</div>
+    <a class="pill" href="servicos-detalhes.html#formatacao">💻 Formatação</a>
+    <a class="pill" href="servicos-detalhes.html#limpeza">🦠 Vírus e limpeza</a>
+    <a class="pill" href="servicos-detalhes.html#otimizacao">⚡ Otimização</a>
+    <a class="pill" href="servicos-detalhes.html#pecas">🔧 Troca de peças</a>
+    <a class="pill" href="servicos-detalhes.html#configuracao">🖨️ Configuração</a>
   </div>
 </div>
 
