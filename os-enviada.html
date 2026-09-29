@@ -11,5 +11,11 @@ h1{font-size:36px;margin:18px 0 10px}.p{color:#b7b0c8;line-height:1.65}
 a{display:inline-block;margin-top:18px;padding:13px 18px;border-radius:14px;background:linear-gradient(135deg,#8b5cf6,#c084fc);color:white;text-decoration:none;font-weight:800}
 </style>
 </head>
-<body><div class="card"><div class="logo">PT</div><h1>Solicitação enviada.</h1><div class="p">A Ordem de Serviço foi encaminhada para o atendimento da ProntoTech. O responsável poderá entrar em contato para pedir informações adicionais ou combinar os próximos passos.</div><a href="index.html">Voltar ao site</a></div></body>
+<body><div class="card"><div class="logo">PT</div><h1>Solicitação enviada.</h1><div class="p">A Ordem de Serviço foi encaminhada para o atendimento da ProntoTech.</div>
+<div id="osBox" style="margin:18px 0;padding:14px;border-radius:14px;background:rgba(139,92,246,.12);border:1px solid rgba(192,132,252,.25);font-weight:800"></div>
+<div class="p">Guarde esse número como referência. O responsável poderá entrar em contato para pedir informações adicionais ou combinar os próximos passos.</div><a href="index.html">Voltar ao site</a></div><script>
+const os = sessionStorage.getItem('prontotech_os');
+document.getElementById('osBox').textContent = os ? 'Número da OS: ' + os : 'Sua solicitação foi registrada com sucesso.';
+</script>
+</body>
 </html>
