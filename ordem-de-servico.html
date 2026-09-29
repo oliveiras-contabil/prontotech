@@ -47,14 +47,16 @@ footer{padding:30px 0 42px;border-top:1px solid var(--line);color:var(--muted);f
 
 <section class="form-wrap">
   <div class="container">
-    <form class="card" action="https://formsubmit.co/felipe.hagihara@outlook.com" method="POST">
+    <form class="card" id="osForm" action="https://formsubmit.co/felipe.hagihara@outlook.com" method="POST" enctype="multipart/form-data">
       <input type="hidden" name="_subject" value="Nova Ordem de Serviço - ProntoTech">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="false">
       <input type="hidden" name="_next" value="https://oliveiras-contabil.github.io/prontotech/os-enviada.html">
+      <input type="hidden" id="osNumber" name="Número da OS" value="">
 
       <div class="success-note">
-        Esta solicitação será enviada para o e-mail responsável pelo atendimento. Na primeira utilização, o serviço de envio poderá solicitar uma confirmação de ativação no e-mail de destino.
+        <strong>Sua OS:</strong> <span id="osPreview">gerando...</span><br>
+        Esta solicitação será enviada para o e-mail responsável pelo atendimento. Guarde o número acima como referência.
       </div>
 
       <div class="section-title">Dados do cliente</div>
@@ -125,6 +127,11 @@ footer{padding:30px 0 42px;border-top:1px solid var(--line);color:var(--muted);f
           <label for="obs">Observações adicionais</label>
           <textarea id="obs" name="Observações" placeholder="Informações extras que possam ajudar no atendimento."></textarea>
         </div>
+        <div class="full">
+          <label for="anexos">Fotos, prints ou PDF</label>
+          <input id="anexos" name="Anexos" type="file" accept="image/*,.pdf" multiple>
+          <div class="note">Você pode anexar fotos do equipamento, prints da tela ou um PDF que ajude a explicar o problema.</div>
+        </div>
       </div>
 
       <div class="hr"></div>
@@ -147,5 +154,20 @@ footer{padding:30px 0 42px;border-top:1px solid var(--line);color:var(--muted);f
 </main>
 
 <footer><div class="container">© 2026 ProntoTech.</div></footer>
+<script>
+(function(){
+  const now = new Date();
+  const pad = n => String(n).padStart(2,'0');
+  const rand = Math.floor(100 + Math.random()*900);
+  const os = 'PT-' + now.getFullYear() + pad(now.getMonth()+1) + pad(now.getDate()) + '-' + pad(now.getHours()) + pad(now.getMinutes()) + pad(now.getSeconds()) + '-' + rand;
+  document.getElementById('osNumber').value = os;
+  document.getElementById('osPreview').textContent = os;
+  sessionStorage.setItem('prontotech_os', os);
+
+  document.getElementById('osForm').addEventListener('submit', function(){
+    sessionStorage.setItem('prontotech_os', document.getElementById('osNumber').value);
+  });
+})();
+</script>
 </body>
 </html>
