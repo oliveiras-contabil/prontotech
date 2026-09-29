@@ -4,32 +4,388 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ProntoTech | Suporte de Informática</title>
-<meta name="description" content="Suporte de informática para o dia a dia: formatação, limpeza, configuração, troca de peças e ajuda com tecnologia.">
+<meta name="description" content="Suporte de informática para o dia a dia: formatação, remoção de vírus, otimização, configuração, troca de peças, backup e ajuda com tecnologia.">
+<meta name="theme-color" content="#07111f">
 <style>
-:root{--bg:#08111f;--bg2:#0d1b2a;--card:#10233a;--card2:#132941;--accent:#39d0ff;--accent2:#7af0c3;--text:#f5f7fb;--muted:#a9b7c7;--line:rgba(255,255,255,.10);--shadow:0 18px 50px rgba(0,0,0,.28)}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at 15% 10%,rgba(57,208,255,.13),transparent 28%),radial-gradient(circle at 85% 15%,rgba(122,240,195,.10),transparent 25%),linear-gradient(180deg,#07101c 0%,#0a1727 45%,#08111f 100%)}a{text-decoration:none;color:inherit}.container{width:min(1160px,92%);margin:auto}header{position:sticky;top:0;z-index:30;backdrop-filter:blur(14px);background:rgba(7,16,28,.78);border-bottom:1px solid var(--line)}.nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:21px}.logo{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent2));color:#07101c;font-weight:900;box-shadow:0 10px 25px rgba(57,208,255,.18)}.menu{display:flex;gap:24px;color:var(--muted);font-size:14px}.menu a:hover{color:white}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:14px 20px;border-radius:14px;font-weight:700;transition:.2s ease;border:1px solid transparent}.btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:#07101c;box-shadow:0 12px 30px rgba(57,208,255,.18)}.btn-primary:hover{transform:translateY(-2px)}.btn-secondary{border-color:var(--line);background:rgba(255,255,255,.04)}.btn-secondary:hover{background:rgba(255,255,255,.08)}.hero{padding:92px 0 64px}.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:44px;align-items:center}.kicker{display:inline-flex;padding:8px 12px;border:1px solid var(--line);border-radius:999px;color:var(--accent2);font-size:13px;font-weight:700;background:rgba(255,255,255,.03)}h1{font-size:clamp(42px,6vw,74px);line-height:.98;margin:20px 0 22px;letter-spacing:-2.8px}.hero p{font-size:19px;line-height:1.65;color:var(--muted);max-width:690px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.trust{display:flex;gap:20px;flex-wrap:wrap;margin-top:26px;color:#cdd7e2;font-size:14px}.trust span::before{content:"✓";color:var(--accent2);margin-right:7px;font-weight:900}.device{position:relative;min-height:430px;border-radius:32px;padding:24px;background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(255,255,255,.025));border:1px solid var(--line);box-shadow:var(--shadow);overflow:hidden}.glow{position:absolute;width:260px;height:260px;border-radius:50%;filter:blur(55px);opacity:.28}.g1{background:var(--accent);right:-80px;top:-70px}.g2{background:var(--accent2);left:-80px;bottom:-90px}.mock{position:relative;z-index:2;height:100%;min-height:382px;border-radius:24px;border:1px solid var(--line);background:#0a1524;padding:22px;display:flex;flex-direction:column;justify-content:space-between}.mock-top{display:flex;justify-content:space-between;align-items:center}.dots{display:flex;gap:7px}.dots i{width:8px;height:8px;border-radius:50%;background:#28445e}.status{font-size:12px;color:var(--accent2)}.screen-title{font-size:30px;font-weight:800;line-height:1.1}.screen-sub{color:var(--muted);font-size:14px;line-height:1.6;margin-top:8px}.progress{height:9px;background:#12283f;border-radius:999px;overflow:hidden;margin-top:20px}.progress span{display:block;width:78%;height:100%;background:linear-gradient(90deg,var(--accent),var(--accent2))}.quick{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}.quick div{padding:14px;border-radius:16px;background:#0f2136;border:1px solid var(--line);font-size:13px;color:#dbe4ec}section{padding:72px 0}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:28px}.section-head h2{font-size:38px;margin:0;letter-spacing:-1.4px}.section-head p{max-width:630px;color:var(--muted);line-height:1.65;margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:24px;border-radius:22px;background:linear-gradient(180deg,var(--card),var(--card2));border:1px solid var(--line);box-shadow:0 10px 30px rgba(0,0,0,.14)}.icon{width:46px;height:46px;border-radius:14px;display:grid;place-items:center;background:rgba(57,208,255,.11);border:1px solid rgba(57,208,255,.22);font-size:22px}.card h3{margin:18px 0 10px;font-size:19px}.card p{color:var(--muted);line-height:1.6;font-size:14px;margin:0}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.step{padding:24px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.035)}.num{font-size:12px;color:var(--accent2);font-weight:800;letter-spacing:.12em}.step h3{font-size:22px;margin:10px 0}.step p{color:var(--muted);line-height:1.6;margin:0}.cta{padding:38px;border-radius:28px;background:linear-gradient(135deg,rgba(57,208,255,.13),rgba(122,240,195,.09));border:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:26px}.cta h2{font-size:34px;margin:0 0 8px}.cta p{color:var(--muted);margin:0;line-height:1.6}.faq{display:grid;grid-template-columns:1fr 1fr;gap:16px}details{border:1px solid var(--line);border-radius:18px;padding:18px 20px;background:rgba(255,255,255,.03)}summary{cursor:pointer;font-weight:700}details p{color:var(--muted);line-height:1.6;margin:12px 0 0}footer{padding:34px 0 44px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.whatsapp{position:fixed;right:20px;bottom:20px;z-index:50;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:white;font-size:27px;box-shadow:0 14px 32px rgba(0,0,0,.32)}.note{font-size:12px;color:#7f90a2;margin-top:9px}
-@media(max-width:900px){.menu{display:none}.hero{padding-top:58px}.hero-grid{grid-template-columns:1fr}.cards,.steps,.faq{grid-template-columns:1fr 1fr}.section-head{align-items:start;flex-direction:column}}
-@media(max-width:620px){.nav>.btn{display:none}h1{font-size:46px;letter-spacing:-1.8px}.cards,.steps,.faq{grid-template-columns:1fr}.hero p{font-size:17px}.device{min-height:auto}.cta{align-items:flex-start;flex-direction:column}}
+:root{
+  --bg:#07111f;--bg2:#0a1828;--card:#0f2237;--card2:#132b45;
+  --accent:#48d7ff;--accent2:#7df2c5;--text:#f7f9fc;--muted:#a8b8c9;
+  --line:rgba(255,255,255,.10);--line2:rgba(72,215,255,.22);
+  --shadow:0 22px 60px rgba(0,0,0,.28);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--text);
+  background:
+  radial-gradient(circle at 12% 8%,rgba(72,215,255,.13),transparent 27%),
+  radial-gradient(circle at 90% 14%,rgba(125,242,197,.10),transparent 22%),
+  linear-gradient(180deg,#06101c 0%,#091726 46%,#07111f 100%);
+}
+a{text-decoration:none;color:inherit}
+.container{width:min(1180px,92%);margin:auto}
+header{
+  position:sticky;top:0;z-index:40;backdrop-filter:blur(16px);
+  background:rgba(6,16,28,.82);border-bottom:1px solid var(--line)
+}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px;font-size:21px;font-weight:850;letter-spacing:-.3px}
+.logo{
+  width:42px;height:42px;border-radius:13px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));color:#06101c;
+  font-weight:900;box-shadow:0 12px 28px rgba(72,215,255,.18)
+}
+.menu{display:flex;align-items:center;gap:26px;color:var(--muted);font-size:14px}
+.menu a:hover{color:#fff}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 20px;
+  border-radius:14px;font-weight:800;border:1px solid transparent;transition:.2s ease
+}
+.btn-primary{
+  background:linear-gradient(135deg,var(--accent),var(--accent2));color:#06101c;
+  box-shadow:0 12px 28px rgba(72,215,255,.17)
+}
+.btn-primary:hover{transform:translateY(-2px);filter:brightness(1.04)}
+.btn-secondary{background:rgba(255,255,255,.04);border-color:var(--line)}
+.btn-secondary:hover{background:rgba(255,255,255,.08)}
+.hero{padding:92px 0 58px}
+.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:46px;align-items:center}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--line2);
+  border-radius:999px;background:rgba(72,215,255,.06);color:var(--accent2);
+  font-size:12px;font-weight:900;letter-spacing:.08em
+}
+h1{font-size:clamp(44px,6vw,76px);line-height:.98;margin:20px 0 22px;letter-spacing:-3px}
+.hero p{max-width:710px;margin:0;color:var(--muted);font-size:19px;line-height:1.65}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.trust{display:flex;gap:18px;flex-wrap:wrap;margin-top:24px;color:#d7e1ea;font-size:13px}
+.trust span{display:flex;align-items:center;gap:7px}
+.trust span::before{content:"✓";color:var(--accent2);font-weight:900}
+.panel{
+  position:relative;min-height:440px;padding:24px;border:1px solid var(--line);
+  border-radius:32px;background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.02));
+  box-shadow:var(--shadow);overflow:hidden
+}
+.glow{position:absolute;width:260px;height:260px;border-radius:50%;filter:blur(58px);opacity:.25}
+.g1{background:var(--accent);right:-80px;top:-80px}.g2{background:var(--accent2);left:-90px;bottom:-95px}
+.screen{
+  position:relative;z-index:2;min-height:390px;padding:24px;border:1px solid var(--line);
+  border-radius:24px;background:#091523;display:flex;flex-direction:column;justify-content:space-between
+}
+.screen-top{display:flex;align-items:center;justify-content:space-between;gap:15px}
+.dots{display:flex;gap:7px}.dots i{width:8px;height:8px;border-radius:50%;background:#29465e}
+.badge{font-size:12px;color:var(--accent2)}
+.screen h2{font-size:31px;line-height:1.12;margin:0 0 10px;letter-spacing:-1.2px}
+.screen p{font-size:14px;line-height:1.6;color:var(--muted);margin:0}
+.problem-list{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px}
+.problem{
+  padding:14px;border-radius:16px;background:#0e2135;border:1px solid var(--line);
+  font-size:13px;color:#dbe6ef
+}
+.problem b{display:block;color:white;margin-bottom:4px}
+.mini-note{margin-top:12px;color:#7f93a6;font-size:12px}
+.problem-strip{padding:22px 0 6px}
+.strip{
+  display:grid;grid-template-columns:repeat(5,1fr);gap:10px
+}
+.pill{
+  padding:14px 12px;text-align:center;border-radius:14px;border:1px solid var(--line);
+  background:rgba(255,255,255,.035);color:#d8e2eb;font-size:13px
+}
+section{padding:72px 0}
+.section-head{display:flex;align-items:end;justify-content:space-between;gap:34px;margin-bottom:30px}
+.section-head h2{font-size:40px;letter-spacing:-1.6px;margin:10px 0 0}
+.section-head p{max-width:640px;color:var(--muted);line-height:1.7;margin:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{
+  padding:25px;border:1px solid var(--line);border-radius:22px;
+  background:linear-gradient(180deg,var(--card),var(--card2));box-shadow:0 10px 30px rgba(0,0,0,.13);
+  transition:.2s ease
+}
+.card:hover{transform:translateY(-3px);border-color:rgba(72,215,255,.25)}
+.icon{
+  width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:22px;
+  background:rgba(72,215,255,.09);border:1px solid rgba(72,215,255,.2)
+}
+.card h3{font-size:19px;margin:18px 0 9px}
+.card p{font-size:14px;line-height:1.65;color:var(--muted);margin:0}
+.highlight{
+  padding:26px;border-radius:22px;border:1px solid rgba(125,242,197,.18);
+  background:linear-gradient(135deg,rgba(125,242,197,.07),rgba(72,215,255,.06))
+}
+.highlight-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+.highlight h3{font-size:28px;margin:0 0 12px}
+.highlight p{color:var(--muted);line-height:1.7;margin:0}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.check{padding:12px 14px;border-radius:13px;background:rgba(255,255,255,.04);border:1px solid var(--line);font-size:13px}
+.check::before{content:"✓";color:var(--accent2);font-weight:900;margin-right:8px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{padding:25px;border:1px solid var(--line);border-radius:22px;background:rgba(255,255,255,.035)}
+.num{font-size:11px;color:var(--accent2);font-weight:900;letter-spacing:.14em}
+.step h3{font-size:22px;margin:10px 0 9px}
+.step p{color:var(--muted);line-height:1.65;margin:0}
+.cta{
+  padding:40px;border-radius:28px;border:1px solid var(--line2);
+  background:linear-gradient(135deg,rgba(72,215,255,.14),rgba(125,242,197,.09));
+  display:flex;align-items:center;justify-content:space-between;gap:28px
+}
+.cta h2{font-size:35px;margin:0 0 8px;letter-spacing:-1px}
+.cta p{color:var(--muted);line-height:1.65;margin:0;max-width:700px}
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+details{border:1px solid var(--line);border-radius:18px;padding:18px 20px;background:rgba(255,255,255,.03)}
+summary{cursor:pointer;font-weight:800}
+details p{color:var(--muted);line-height:1.65;margin:12px 0 0}
+footer{padding:34px 0 44px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.whatsapp{
+  position:fixed;right:20px;bottom:20px;z-index:50;width:58px;height:58px;border-radius:50%;
+  display:grid;place-items:center;background:#25D366;color:#fff;font-size:28px;
+  box-shadow:0 14px 34px rgba(0,0,0,.32);transition:.2s ease
+}
+.whatsapp:hover{transform:translateY(-3px) scale(1.03)}
+@media(max-width:950px){
+  .menu{display:none}.hero{padding-top:58px}.hero-grid,.highlight-grid{grid-template-columns:1fr}
+  .cards,.steps{grid-template-columns:1fr 1fr}.strip{grid-template-columns:repeat(3,1fr)}
+  .section-head{align-items:start;flex-direction:column}
+}
+@media(max-width:650px){
+  .nav>.btn{display:none}h1{font-size:47px;letter-spacing:-2px}.hero p{font-size:17px}
+  .cards,.steps,.faq,.checks,.problem-list,.strip{grid-template-columns:1fr}
+  .panel{min-height:auto}.cta{align-items:flex-start;flex-direction:column}
+  .section-head h2{font-size:34px}
+}
 </style>
 </head>
 <body>
-<header><div class="container nav"><a class="brand" href="#"><span class="logo">PT</span> ProntoTech</a><nav class="menu"><a href="#servicos">Serviços</a><a href="#como-funciona">Como funciona</a><a href="#duvidas">Dúvidas</a></nav><a class="btn btn-primary" href="https://wa.me/5511999999999" target="_blank">Falar no WhatsApp</a></div></header>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#"><span class="logo">PT</span> ProntoTech</a>
+    <nav class="menu">
+      <a href="#servicos">Serviços</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+    <a class="btn btn-primary" href="https://wa.me/5511999999999" target="_blank" rel="noopener">Falar no WhatsApp</a>
+  </div>
+</header>
+
 <main>
-<section class="hero"><div class="container hero-grid"><div><span class="kicker">SUPORTE DE INFORMÁTICA PARA O DIA A DIA</span><h1>Problema com tecnologia? A gente resolve.</h1><p>Formatação, limpeza, instalação, configuração, troca de peças e ajuda para quem precisa usar computador, celular ou periféricos sem dor de cabeça.</p><div class="actions"><a class="btn btn-primary" href="https://wa.me/5511999999999" target="_blank">Quero ajuda agora</a><a class="btn btn-secondary" href="#servicos">Ver serviços</a></div><div class="trust"><span>Atendimento simples</span><span>Explicação sem “tecniquês”</span><span>Remoto ou presencial*</span></div><div class="note">*Conforme disponibilidade e região de atendimento.</div></div>
-<div class="device"><span class="glow g1"></span><span class="glow g2"></span><div class="mock"><div class="mock-top"><div class="dots"><i></i><i></i><i></i></div><div class="status">● Atendimento disponível</div></div><div><div class="screen-title">Seu computador funcionando como deveria.</div><div class="screen-sub">Você explica o que está acontecendo. A gente identifica o problema e orienta a melhor solução.</div><div class="progress"><span></span></div><div class="quick"><div>⚙️ Formatar<br><small>Windows e programas</small></div><div>⚡ Otimizar<br><small>Mais leve e organizado</small></div><div>🖨️ Configurar<br><small>Impressoras e acessórios</small></div><div>💾 Atualizar<br><small>SSD, memória e periféricos</small></div></div></div></div></div></div></section>
-<section id="servicos"><div class="container"><div class="section-head"><div><span class="kicker">O QUE A GENTE FAZ</span><h2>Ajuda prática para os problemas mais comuns</h2></div><p>Você não precisa saber o nome técnico do problema. Explique o que está acontecendo e a gente ajuda a encontrar a melhor solução.</p></div><div class="cards">
-<article class="card"><div class="icon">💻</div><h3>Formatação e reinstalação</h3><p>Reinstalação do Windows, drivers e programas essenciais, com orientação sobre backup antes do serviço.</p></article>
-<article class="card"><div class="icon">⚡</div><h3>Computador lento</h3><p>Limpeza de programas desnecessários, ajustes de inicialização, organização e verificação do sistema.</p></article>
-<article class="card"><div class="icon">🔧</div><h3>Troca de peças</h3><p>SSD, memória, teclado, mouse e outros componentes ou periféricos compatíveis com o equipamento.</p></article>
-<article class="card"><div class="icon">🖨️</div><h3>Instalação e configuração</h3><p>Impressoras, scanners, roteadores, acessórios e programas que você precisa usar no dia a dia.</p></article>
-<article class="card"><div class="icon">📁</div><h3>Backup e transferência</h3><p>Ajuda para organizar, copiar e transferir arquivos entre computadores, HDs, pendrives ou nuvem.</p></article>
-<article class="card"><div class="icon">🧭</div><h3>Ajuda com tecnologia</h3><p>E-mail, aplicativos, configurações e dúvidas em geral para quem simplesmente quer fazer algo funcionar.</p></article>
-</div></div></section>
-<section id="como-funciona"><div class="container"><div class="section-head"><div><span class="kicker">SEM COMPLICAÇÃO</span><h2>Como funciona</h2></div><p>Um atendimento direto, pensado para quem quer resolver o problema sem ficar perdido em termos técnicos.</p></div><div class="steps"><div class="step"><div class="num">PASSO 01</div><h3>Conte o problema</h3><p>Mande uma mensagem explicando o que está acontecendo. Foto ou vídeo também pode ajudar.</p></div><div class="step"><div class="num">PASSO 02</div><h3>Receba a orientação</h3><p>É feita uma avaliação inicial para indicar a forma de atendimento e o que provavelmente será necessário.</p></div><div class="step"><div class="num">PASSO 03</div><h3>Resolvido</h3><p>O serviço é realizado e você recebe as orientações necessárias para continuar usando tudo normalmente.</p></div></div></div></section>
-<section><div class="container"><div class="cta"><div><h2>Não sabe nem por onde começar?</h2><p>Sem problema. Diga o que você está tentando fazer e o que apareceu na tela.</p></div><a class="btn btn-primary" href="https://wa.me/5511999999999" target="_blank">Chamar no WhatsApp</a></div></div></section>
-<section id="duvidas"><div class="container"><div class="section-head"><div><span class="kicker">DÚVIDAS</span><h2>Perguntas frequentes</h2></div></div><div class="faq"><details><summary>Vocês atendem presencialmente?</summary><p>Sim, quando houver disponibilidade e a região estiver dentro da área de atendimento. Também podem ser oferecidos atendimentos remotos para diversos tipos de problema.</p></details><details><summary>Preciso saber explicar o defeito?</summary><p>Não. Basta dizer o que está acontecendo, quando começou e, se possível, enviar uma foto ou vídeo.</p></details><details><summary>Vocês vendem peças?</summary><p>O serviço pode incluir orientação e instalação de peças. A forma de compra e fornecimento pode ser combinada antes do atendimento.</p></details><details><summary>Tem orçamento antes?</summary><p>Após entender o problema, é possível informar a forma de atendimento e combinar o valor antes da execução do serviço.</p></details></div></div></section>
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow">SUPORTE DE INFORMÁTICA • SEM COMPLICAÇÃO</span>
+      <h1>Deu problema no computador? A gente ajuda a resolver.</h1>
+      <p>Formatação, remoção de vírus, computador lento, instalação de programas, configuração de impressoras e roteadores, troca de peças, backup e suporte para quem só quer que a tecnologia funcione.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://wa.me/5511999999999" target="_blank" rel="noopener">💬 Explicar meu problema</a>
+        <a class="btn btn-secondary" href="#servicos">Ver os serviços</a>
+      </div>
+      <div class="trust">
+        <span>Atendimento claro</span>
+        <span>Sem “tecniquês”</span>
+        <span>Remoto ou presencial*</span>
+      </div>
+    </div>
+
+    <div class="panel">
+      <span class="glow g1"></span><span class="glow g2"></span>
+      <div class="screen">
+        <div class="screen-top">
+          <div class="dots"><i></i><i></i><i></i></div>
+          <div class="badge">● Fale direto pelo WhatsApp</div>
+        </div>
+        <div>
+          <h2>Você não precisa saber o nome do defeito.</h2>
+          <p>Diga o que está acontecendo. A partir disso, avaliamos o problema e indicamos o melhor caminho.</p>
+          <div class="problem-list">
+            <div class="problem"><b>🐢 Está muito lento</b>Travando, demorando para iniciar ou abrir programas.</div>
+            <div class="problem"><b>🦠 Vírus e pop-ups</b>Janelas estranhas, anúncios e comportamento suspeito.</div>
+            <div class="problem"><b>💻 Precisa formatar</b>Windows, drivers, programas e organização inicial.</div>
+            <div class="problem"><b>🔧 Quer melhorar o PC</b>SSD, memória, periféricos e outros upgrades.</div>
+          </div>
+          <div class="mini-note">* Atendimento presencial conforme região e disponibilidade.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="problem-strip">
+  <div class="container strip">
+    <div class="pill">💻 Formatação</div>
+    <div class="pill">🦠 Vírus e limpeza</div>
+    <div class="pill">⚡ Otimização</div>
+    <div class="pill">🔧 Troca de peças</div>
+    <div class="pill">🖨️ Configuração</div>
+  </div>
+</div>
+
+<section id="servicos">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">SERVIÇOS</span>
+        <h2>Ajuda prática para problemas reais</h2>
+      </div>
+      <p>Do computador lento à impressora que não conecta: o atendimento parte do problema que você está vendo, não de termos técnicos que você teria de conhecer.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <div class="icon">💻</div>
+        <h3>Formatação e reinstalação</h3>
+        <p>Reinstalação do Windows, drivers e programas essenciais, com orientação sobre backup antes do serviço.</p>
+      </article>
+      <article class="card">
+        <div class="icon">🦠</div>
+        <h3>Remoção de vírus e ameaças</h3>
+        <p>Verificação e remoção de softwares indesejados, extensões suspeitas, pop-ups e outros problemas de segurança.</p>
+      </article>
+      <article class="card">
+        <div class="icon">⚡</div>
+        <h3>Computador lento ou travando</h3>
+        <p>Revisão de inicialização, programas desnecessários, armazenamento e configurações que podem afetar o desempenho.</p>
+      </article>
+      <article class="card">
+        <div class="icon">🔧</div>
+        <h3>Troca e instalação de peças</h3>
+        <p>SSD, memória, teclado, mouse e outros componentes ou periféricos compatíveis com o equipamento.</p>
+      </article>
+      <article class="card">
+        <div class="icon">🖨️</div>
+        <h3>Instalação e configuração</h3>
+        <p>Impressoras, scanners, roteadores, acessórios, programas e configurações para o uso do dia a dia.</p>
+      </article>
+      <article class="card">
+        <div class="icon">📁</div>
+        <h3>Backup e transferência de arquivos</h3>
+        <p>Ajuda para organizar, copiar e transferir arquivos entre computadores, HDs, pendrives ou serviços em nuvem.</p>
+      </article>
+      <article class="card">
+        <div class="icon">🌐</div>
+        <h3>Internet e Wi-Fi</h3>
+        <p>Apoio em configurações básicas de rede, roteador, conexão sem fio e dispositivos que não conseguem se conectar.</p>
+      </article>
+      <article class="card">
+        <div class="icon">📧</div>
+        <h3>E-mail, contas e programas</h3>
+        <p>Configuração de e-mail, instalação de aplicativos e ajuda para colocar ferramentas do cotidiano para funcionar.</p>
+      </article>
+      <article class="card">
+        <div class="icon">🧭</div>
+        <h3>Ajuda com tecnologia</h3>
+        <p>Não sabe mexer em alguma função? Explique o que quer fazer e receba orientação de forma simples e objetiva.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="highlight">
+      <div class="highlight-grid">
+        <div>
+          <span class="eyebrow">ANTES DE GASTAR À TOA</span>
+          <h3>Nem todo problema significa comprar outro computador.</h3>
+          <p>Muitas situações podem ser resolvidas com ajustes, limpeza, reinstalação ou uma atualização simples. A ideia é primeiro entender o problema e indicar uma solução compatível com o equipamento e com o que você realmente precisa.</p>
+        </div>
+        <div class="checks">
+          <div class="check">Avaliação do problema</div>
+          <div class="check">Explicação simples</div>
+          <div class="check">Opções de solução</div>
+          <div class="check">Orientação antes do serviço</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="como-funciona">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">COMO FUNCIONA</span>
+        <h2>Você conta o problema. O resto a gente organiza.</h2>
+      </div>
+      <p>Um processo simples para evitar idas e vindas e descobrir rapidamente qual é o tipo de atendimento mais adequado.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="num">PASSO 01</div>
+        <h3>Conte o que aconteceu</h3>
+        <p>Mande uma mensagem descrevendo o problema. Foto, vídeo ou print da tela pode ajudar bastante.</p>
+      </div>
+      <div class="step">
+        <div class="num">PASSO 02</div>
+        <h3>Receba uma avaliação inicial</h3>
+        <p>Com as informações disponíveis, é indicado se o caso pode ser atendido remotamente ou se é melhor analisar o equipamento.</p>
+      </div>
+      <div class="step">
+        <div class="num">PASSO 03</div>
+        <h3>Combine a solução</h3>
+        <p>Você entende o que será feito antes do serviço e pode tirar suas dúvidas sem precisar dominar informática.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="cta">
+      <div>
+        <h2>Tem uma coisa estranha acontecendo no computador?</h2>
+        <p>Não precisa diagnosticar sozinho. Mande uma mensagem dizendo o que aconteceu e, se puder, uma foto ou print. Isso já é um ótimo começo.</p>
+      </div>
+      <a class="btn btn-primary" href="https://wa.me/5511999999999" target="_blank" rel="noopener">💬 Chamar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section id="duvidas">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">DÚVIDAS</span>
+        <h2>Perguntas frequentes</h2>
+      </div>
+    </div>
+    <div class="faq">
+      <details>
+        <summary>Preciso saber explicar tecnicamente o problema?</summary>
+        <p>Não. Basta contar o que você percebeu, quando começou e o que acontece na tela. Fotos, vídeos ou prints podem ajudar.</p>
+      </details>
+      <details>
+        <summary>O atendimento pode ser remoto?</summary>
+        <p>Alguns problemas podem ser resolvidos ou diagnosticados à distância. Outros exigem acesso físico ao computador ou ao equipamento.</p>
+      </details>
+      <details>
+        <summary>Vocês atendem presencialmente?</summary>
+        <p>O atendimento presencial depende da região e da disponibilidade. Isso pode ser confirmado diretamente pelo WhatsApp.</p>
+      </details>
+      <details>
+        <summary>Posso pedir ajuda só para configurar alguma coisa?</summary>
+        <p>Sim. O suporte também pode ser para instalação de programas, impressoras, periféricos, e-mail e outras configurações do cotidiano.</p>
+      </details>
+      <details>
+        <summary>Vocês podem instalar SSD ou memória?</summary>
+        <p>Sim, desde que o componente seja compatível com o equipamento. A compatibilidade pode ser verificada antes da instalação.</p>
+      </details>
+      <details>
+        <summary>Preciso fazer backup antes de formatar?</summary>
+        <p>Se houver arquivos importantes no computador, o backup deve ser tratado antes da formatação. Isso será alinhado antes do serviço.</p>
+      </details>
+    </div>
+  </div>
+</section>
 </main>
-<footer><div class="container foot"><div>© 2026 ProntoTech. Todos os direitos reservados.</div><div>Suporte de informática simples, claro e sem complicação.</div></div></footer>
-<a class="whatsapp" href="https://wa.me/5511999999999" target="_blank" aria-label="WhatsApp">☎</a>
+
+<footer>
+  <div class="container foot">
+    <div>© 2026 ProntoTech. Todos os direitos reservados.</div>
+    <div>Suporte de informática simples, claro e sem complicação.</div>
+  </div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/5511999999999" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">💬</a>
 </body>
 </html>
