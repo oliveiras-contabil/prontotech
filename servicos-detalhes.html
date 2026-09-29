@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProntoTech | Conheça o trabalho</title>
+<meta name="description" content="Veja em detalhes como funciona o suporte da ProntoTech em formatação, limpeza, otimização, upgrades e configuração.">
+<meta name="theme-color" content="#07111f">
+<style>
+:root{--bg:#07111f;--card:#101d31;--card2:#151f35;--accent:#8b5cf6;--accent2:#c084fc;--text:#f8f7ff;--muted:#b7b0c8;--line:rgba(255,255,255,.10);--purple:rgba(139,92,246,.18)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Segoe UI,Arial,sans-serif;color:var(--text);background:radial-gradient(circle at 10% 8%,rgba(139,92,246,.18),transparent 27%),radial-gradient(circle at 88% 16%,rgba(192,132,252,.10),transparent 24%),linear-gradient(180deg,#070d19,#0a1322 52%,#07111f)}
+a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:50;backdrop-filter:blur(16px);background:rgba(7,13,25,.84);border-bottom:1px solid var(--line)}
+.nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:11px;font-size:21px;font-weight:850}.logo{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),var(--accent2));font-weight:900}.navlinks{display:flex;gap:22px;color:var(--muted);font-size:14px}.navlinks a:hover{color:white}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border-radius:14px;font-weight:800;border:1px solid transparent}.btn-primary{background:linear-gradient(135deg,var(--accent),var(--accent2));color:white;box-shadow:0 12px 30px rgba(139,92,246,.20)}.btn-secondary{border-color:var(--line);background:rgba(255,255,255,.04)}
+.hero{padding:90px 0 56px}.eyebrow{display:inline-flex;padding:8px 12px;border-radius:999px;border:1px solid rgba(139,92,246,.28);background:rgba(139,92,246,.08);color:#d7b4ff;font-size:12px;font-weight:900;letter-spacing:.08em}
+h1{font-size:clamp(44px,6.5vw,78px);line-height:.98;letter-spacing:-3px;margin:18px 0 20px;max-width:930px}.lead{max-width:780px;color:var(--muted);font-size:19px;line-height:1.7}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.toc{padding:16px 0 6px}.toc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.toc a{padding:14px;border:1px solid var(--line);border-radius:14px;background:rgba(255,255,255,.035);text-align:center;font-size:13px;transition:.2s}.toc a:hover{transform:translateY(-2px);border-color:rgba(139,92,246,.35);background:rgba(139,92,246,.08)}
+section{padding:64px 0}.section-title{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:26px}.section-title h2{font-size:38px;letter-spacing:-1.5px;margin:9px 0 0}.section-title p{max-width:580px;color:var(--muted);line-height:1.7;margin:0}
+.service{scroll-margin-top:92px;margin-bottom:20px;padding:28px;border-radius:24px;border:1px solid var(--line);background:linear-gradient(180deg,var(--card),var(--card2));box-shadow:0 12px 34px rgba(0,0,0,.16)}.service-head{display:flex;gap:18px;align-items:flex-start}.icon{width:54px;height:54px;flex:0 0 54px;border-radius:16px;display:grid;place-items:center;font-size:25px;background:rgba(139,92,246,.12);border:1px solid rgba(139,92,246,.24)}.service h3{font-size:26px;margin:2px 0 8px;letter-spacing:-.7px}.service .intro{color:var(--muted);line-height:1.65;margin:0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}.box{padding:18px;border-radius:17px;background:rgba(255,255,255,.035);border:1px solid var(--line)}.box b{display:block;margin-bottom:8px}.box ul{margin:0;padding-left:19px;color:var(--muted);line-height:1.75}.result{margin-top:18px;padding:16px 18px;border-radius:16px;background:linear-gradient(135deg,rgba(139,92,246,.13),rgba(192,132,252,.08));border:1px solid rgba(139,92,246,.24);color:#e9e2f5;line-height:1.65}.result strong{color:white}
+.difference{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.diff{padding:20px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.035)}.diff b{display:block;margin-bottom:7px}.diff p{color:var(--muted);font-size:14px;line-height:1.6;margin:0}
+.cta{padding:38px;border-radius:27px;border:1px solid rgba(139,92,246,.27);background:linear-gradient(135deg,rgba(139,92,246,.16),rgba(192,132,252,.09));display:flex;justify-content:space-between;align-items:center;gap:24px}.cta h2{font-size:34px;margin:0 0 8px}.cta p{color:var(--muted);margin:0;line-height:1.65;max-width:700px}
+footer{padding:34px 0 44px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+@media(max-width:900px){.navlinks{display:none}.toc-grid{grid-template-columns:repeat(2,1fr)}.section-title{flex-direction:column;align-items:flex-start}.difference{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.nav>.btn{display:none}h1{font-size:46px;letter-spacing:-2px}.lead{font-size:17px}.toc-grid,.grid,.difference{grid-template-columns:1fr}.service{padding:22px}.service-head{flex-direction:column}.cta{flex-direction:column;align-items:flex-start}}
+</style>
+</head>
+<body>
+<header>
+<div class="container nav">
+  <a class="brand" href="index.html"><span class="logo">PT</span> ProntoTech</a>
+  <nav class="navlinks">
+    <a href="#formatacao">Formatação</a>
+    <a href="#limpeza">Vírus e limpeza</a>
+    <a href="#otimizacao">Otimização</a>
+    <a href="#pecas">Peças</a>
+    <a href="#configuracao">Configuração</a>
+  </nav>
+  <a class="btn btn-primary" href="index.html">Voltar ao início</a>
+</div>
+</header>
+
+<main>
+<section class="hero">
+<div class="container">
+  <span class="eyebrow">CONHEÇA O TRABALHO</span>
+  <h1>Mais do que “arrumar computador”: entender o problema e entregar uma solução que faça sentido.</h1>
+  <p class="lead">Nesta página, o cliente pode ver com mais clareza como cada tipo de serviço é conduzido, o que costuma ser verificado e o que pode fazer diferença no resultado final.</p>
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="#formatacao">Ver os serviços em detalhes</a>
+    <a class="btn btn-secondary" href="index.html#servicos">Voltar aos serviços</a>
+  </div>
+</div>
+</section>
+
+<div class="toc">
+<div class="container toc-grid">
+  <a href="#formatacao">💻 Formatação</a>
+  <a href="#limpeza">🦠 Vírus e limpeza</a>
+  <a href="#otimizacao">⚡ Otimização</a>
+  <a href="#pecas">🔧 Troca de peças</a>
+  <a href="#configuracao">🖨️ Configuração</a>
+</div>
+</div>
+
+<section>
+<div class="container">
+  <div class="section-title">
+    <div><span class="eyebrow">EM DETALHES</span><h2>O que é feito em cada serviço</h2></div>
+    <p>Sem promessas genéricas. A ideia é mostrar ao cliente quais cuidados entram em cada tipo de atendimento.</p>
+  </div>
+
+  <article class="service" id="formatacao">
+    <div class="service-head">
+      <div class="icon">💻</div>
+      <div><h3>Formatação e reinstalação</h3><p class="intro">Para quando o sistema está muito comprometido, precisa ser refeito ou o cliente quer começar com uma instalação limpa e organizada.</p></div>
+    </div>
+    <div class="grid">
+      <div class="box"><b>O que pode entrar no serviço</b><ul><li>Orientação sobre backup antes de qualquer apagamento.</li><li>Reinstalação do Windows.</li><li>Instalação de drivers necessários.</li><li>Instalação de programas essenciais combinados com o cliente.</li><li>Configurações iniciais e atualizações.</li></ul></div>
+      <div class="box"><b>O cuidado importante</b><ul><li>Confirmar o que precisa ser preservado.</li><li>Evitar instalar programas desnecessários.</li><li>Verificar compatibilidade de drivers e periféricos.</li><li>Entregar o computador pronto para o uso combinado.</li></ul></div>
+    </div>
+    <div class="result"><strong>O que o cliente percebe:</strong> sistema reorganizado, programas essenciais funcionando e uma base mais limpa para voltar a usar o computador.</div>
+  </article>
+
+  <article class="service" id="limpeza">
+    <div class="service-head">
+      <div class="icon">🦠</div>
+      <div><h3>Vírus, pop-ups e limpeza do sistema</h3><p class="intro">Quando aparecem anúncios estranhos, extensões desconhecidas, programas que surgiram sozinhos ou comportamentos que não parecem normais.</p></div>
+    </div>
+    <div class="grid">
+      <div class="box"><b>O que pode ser verificado</b><ul><li>Programas e extensões suspeitas.</li><li>Itens de inicialização.</li><li>Softwares potencialmente indesejados.</li><li>Navegadores e configurações alteradas.</li><li>Ferramentas de segurança e atualizações.</li></ul></div>
+      <div class="box"><b>Além de remover</b><ul><li>Explicar o que provavelmente causou o problema.</li><li>Orientar cuidados básicos para evitar repetição.</li><li>Revisar alterações deixadas por softwares indesejados.</li><li>Identificar quando a reinstalação completa é mais adequada.</li></ul></div>
+    </div>
+    <div class="result"><strong>O que o cliente percebe:</strong> menos pop-ups, menos programas estranhos e um ambiente mais previsível para o uso diário.</div>
+  </article>
+
+  <article class="service" id="otimizacao">
+    <div class="service-head">
+      <div class="icon">⚡</div>
+      <div><h3>Otimização de computador lento</h3><p class="intro">Antes de simplesmente formatar ou mandar comprar outro equipamento, vale entender por que a máquina está lenta.</p></div>
+    </div>
+    <div class="grid">
+      <div class="box"><b>O que pode ser analisado</b><ul><li>Programas iniciando junto com o Windows.</li><li>Espaço disponível no armazenamento.</li><li>Uso excessivo de memória.</li><li>Atualizações pendentes.</li><li>Programas que consomem recursos sem necessidade.</li></ul></div>
+      <div class="box"><b>Quando hardware pode ajudar</b><ul><li>Troca de HD por SSD.</li><li>Aumento de memória, quando compatível.</li><li>Identificação de limitações do equipamento.</li><li>Orientação sobre custo-benefício antes de gastar.</li></ul></div>
+    </div>
+    <div class="result"><strong>O que o cliente percebe:</strong> uma avaliação mais racional — primeiro entender o gargalo, depois decidir entre ajuste, upgrade ou reinstalação.</div>
+  </article>
+
+  <article class="service" id="pecas">
+    <div class="service-head">
+      <div class="icon">🔧</div>
+      <div><h3>Troca e instalação de peças</h3><p class="intro">Para melhorar desempenho, substituir componentes ou instalar periféricos compatíveis com o equipamento.</p></div>
+    </div>
+    <div class="grid">
+      <div class="box"><b>Exemplos de atendimento</b><ul><li>SSD e armazenamento.</li><li>Memória RAM.</li><li>Teclado, mouse e periféricos.</li><li>Componentes compatíveis com o modelo.</li></ul></div>
+      <div class="box"><b>Antes de comprar</b><ul><li>Verificar compatibilidade.</li><li>Avaliar se o upgrade realmente atende à necessidade.</li><li>Evitar compra de peça inadequada.</li><li>Combinar previamente o que será instalado.</li></ul></div>
+    </div>
+    <div class="result"><strong>O que o cliente percebe:</strong> menos risco de comprar peça errada e mais clareza sobre o ganho esperado com a atualização.</div>
+  </article>
+
+  <article class="service" id="configuracao">
+    <div class="service-head">
+      <div class="icon">🖨️</div>
+      <div><h3>Instalação, configuração e ajuda com tecnologia</h3><p class="intro">Nem todo chamado é “defeito”. Às vezes a pessoa só precisa fazer um equipamento, programa ou conta funcionar corretamente.</p></div>
+    </div>
+    <div class="grid">
+      <div class="box"><b>O que pode ser configurado</b><ul><li>Impressoras e scanners.</li><li>Roteadores e Wi-Fi básico.</li><li>E-mail e contas.</li><li>Programas e aplicativos.</li><li>Periféricos e acessórios.</li></ul></div>
+      <div class="box"><b>O diferencial aqui</b><ul><li>Explicação sem complicar.</li><li>Mostrar ao cliente como usar depois.</li><li>Resolver pequenas dúvidas que travam o dia a dia.</li><li>Identificar quando o problema é do equipamento, da rede ou da configuração.</li></ul></div>
+    </div>
+    <div class="result"><strong>O que o cliente percebe:</strong> a tecnologia funcionando e, sempre que possível, entendendo o básico para conseguir usar depois.</div>
+  </article>
+</div>
+</section>
+
+<section>
+<div class="container">
+  <div class="section-title">
+    <div><span class="eyebrow">JEITO DE TRABALHAR</span><h2>O que merece destaque</h2></div>
+  </div>
+  <div class="difference">
+    <div class="diff"><b>Diagnóstico antes da solução</b><p>Nem todo problema pede formatação, troca de peça ou gasto imediato.</p></div>
+    <div class="diff"><b>Linguagem simples</b><p>O cliente não precisa conhecer termos técnicos para explicar o que está acontecendo.</p></div>
+    <div class="diff"><b>Transparência no processo</b><p>O objetivo é explicar o que será feito antes de executar o serviço.</p></div>
+    <div class="diff"><b>Foco no uso real</b><p>A solução deve fazer sentido para a forma como a pessoa realmente usa o equipamento.</p></div>
+  </div>
+</div>
+</section>
+
+<section>
+<div class="container">
+  <div class="cta">
+    <div><h2>Quer saber se ele consegue resolver o seu caso?</h2><p>Volte à página inicial e explique o que está acontecendo. Foto, vídeo ou print da tela pode ajudar na avaliação inicial.</p></div>
+    <a class="btn btn-primary" href="index.html">Ir para a página inicial</a>
+  </div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="container foot">
+  <div>© 2026 ProntoTech.</div>
+  <div>Suporte de informática simples, claro e sem complicação.</div>
+</div>
+</footer>
+</body>
+</html>
